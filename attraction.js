@@ -68,8 +68,8 @@
         if (!item.attraction) continue;
         if (item.attraction === currentId) {
           return previous || {
-            name: "Lokalist Istanbul（Taksim）",
-            query: "Lokalist Istanbul Taksim",
+            name: "Moxy Istanbul Taksim",
+            query: "Moxy Istanbul Taksim",
             mode: "transit"
           };
         }
@@ -86,8 +86,8 @@
     }
 
     return {
-      name: "Lokalist Istanbul（Taksim）",
-      query: "Lokalist Istanbul Taksim",
+      name: "Moxy Istanbul Taksim",
+      query: "Moxy Istanbul Taksim",
       mode: "transit"
     };
   }

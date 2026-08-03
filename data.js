@@ -4,15 +4,15 @@ const TRIP_DATA = {
       id: 0,
       label: "Day 0",
       title: "抵达 · 在 Taksim 落脚",
-      area: "IST 机场 → Lokalist Istanbul",
+      area: "IST 机场 → Moxy Istanbul Taksim",
       date: "OCT 30 · FRI",
       summary: "晚间抵达，只处理入境、接送与入住，把体力留给两个完整游览日。",
       image: "assets/images/bosphorus.jpg",
       color: "terracotta",
       items: [
         { time: "晚间", title: "抵达伊斯坦布尔 IST", meta: "入境、取行李与通信准备 · 预留约 60–90 分钟", type: "transfer" },
-        { time: "落地 +90", title: "酒店预约接送", meta: "IST → Lokalist Istanbul，通常约 60–90 分钟", type: "transfer" },
-        { time: "入住后", title: "办理入住 · Lokalist Istanbul", meta: "Taksim 附近连住三晚，不在短途旅行中搬酒店", type: "stay" },
+        { time: "落地 +90", title: "提前预约专车接送", meta: "IST → Moxy Istanbul Taksim，通常约 60–90 分钟；酒店不提供机场接驳", type: "transfer" },
+        { time: "入住后", title: "办理入住 · Moxy Istanbul Taksim", meta: "独立大街附近连住三晚，不在短途旅行中搬酒店", type: "stay" },
         { time: "睡前", title: "确认次日票券、船班与天气", meta: "多尔玛巴赫切宫票券离线保存；再次确认 14:40 游船、风力与降雨", type: "note" }
       ]
     },
@@ -61,14 +61,14 @@ const TRIP_DATA = {
         { time: "17:05", title: "阿拉斯塔市集 · 购物时间", attraction: "arasta-bazaar", meta: "17:05–18:15 · 重点看陶瓷、织物、咖啡器具与小件手工艺；规模较小，不为高价商品仓促决定" },
         { time: "18:15", title: "T1 前往 Sirkeci", meta: "步行至 Sultanahmet 站 → Sirkeci；18:35 左右抵达餐厅附近", type: "transfer" },
         { time: "18:45", title: "Olden 1772 晚餐", meta: "18:45–20:15 · 不赶演出，留足点菜、甜点与结账时间", type: "food" },
-        { time: "20:15", title: "返回 Lokalist Istanbul", meta: "Sirkeci 乘 T1 至 Kabataş，换 F1 至 Taksim；约 21:00 回到酒店", type: "transfer" }
+        { time: "20:15", title: "返回 Moxy Istanbul Taksim", meta: "Sirkeci 乘 T1 至 Kabataş，换 F1 至 Taksim；约 21:00 回到酒店", type: "transfer" }
       ]
     },
     {
       id: 3,
       label: "Day 3",
       title: "返程 · 13:30 飞往上海",
-      area: "Lokalist Istanbul → IST",
+      area: "Moxy Istanbul Taksim → IST",
       date: "NOV 02 · MON",
       summary: "不再新增景点，08:30 准时离店，为周一早高峰、国际航班、安检和步行距离留足缓冲；起飞时间以机票订单和航司通知为准。",
       image: "assets/images/istiklal.jpg",
@@ -1374,29 +1374,29 @@ TRIP_DATA.stopDetails = {
   "d0-0": {
     kind: "transport",
     origin: "IST 国际到达层",
-    destination: "Lokalist Istanbul · Taksim",
+    destination: "Moxy Istanbul Taksim",
     mapQuery: "Istanbul Airport",
     intro: "落地后的目标不是赶路，而是稳定完成入境、取行李、联网和进城。把酒店地址与接送司机信息提前截图。",
-    route: ["IST 到达层", "M11 Gayrettepe", "M2 Taksim", "Lokalist Istanbul"],
+    route: ["IST 到达层", "M11 Gayrettepe", "M2 Taksim", "Moxy Istanbul Taksim"],
     public: {
       time: "约 70–90 分钟",
       cost: "至少约 92.40 TL / 人；M11 专项票价需临近复核",
       summary: "M11 至 Gayrettepe，换乘 M2 至 Taksim，再步行到酒店；不能再按旧价 84 TL 锁定预算。",
-      steps: ["在机场地铁层购买或充值 Istanbulkart", "M11 往 Gayrettepe 方向", "换乘 M2 往 Yenikapı，Taksim 下车", "携大件行李时预留较长换乘距离"]
+      steps: ["在机场地铁层购买或充值 Istanbulkart", "M11 往 Gayrettepe 方向", "换乘 M2 往 Yenikapı，Taksim 下车", "从 İstiklal Caddesi 一侧出站，步行约 5–8 分钟到 Moxy"]
     },
     ride: {
       time: "约 50–90 分钟",
       cost: "普通出租车约 2,000–3,000 TL / 车",
-      summary: "黄色出租车或平台叫车直达；拥堵、过路费和平台服务费会使价格上浮。酒店预约接送价格以书面确认单为准。"
+      summary: "黄色出租车或平台叫车直达；拥堵、过路费和平台服务费会使价格上浮。提前预约专车的价格以书面确认单为准。"
     },
-    tips: ["在官方上车区核对车牌，不接受揽客者的口头一口价。", "如果航班延误，优先通知酒店接送方，不要边走边临时改方案。"]
+    tips: ["在官方上车区核对车牌，不接受揽客者的口头一口价。", "Moxy 官方不提供机场接驳；如果航班延误，优先通知预订的专车平台或司机。"]
   },
   "d0-1": {
     kind: "transport",
     origin: "IST 机场到达层",
-    destination: "Lokalist Istanbul · Taksim",
-    mapQuery: "Lokalist Istanbul Taksim",
-    intro: "预约接送是晚间抵达最省体力的方案。上车前确认司机姓名、车牌、包含的等待时间及是否另收过路费。",
+    destination: "Moxy Istanbul Taksim",
+    mapQuery: "Moxy Istanbul Taksim",
+    intro: "提前预约的专车是晚间抵达最省体力的方案。Moxy 官方不提供机场接驳；上车前确认司机姓名、车牌、包含的等待时间及是否另收过路费。",
     route: ["到达大厅会合点", "机场高速", "Taksim", "酒店前台"],
     public: {
       time: "约 70–90 分钟",
@@ -1405,16 +1405,16 @@ TRIP_DATA.stopDetails = {
     },
     ride: {
       time: "约 50–90 分钟",
-      cost: "普通出租车约 2,000–3,000 TL / 车；酒店预约接送以确认单为准",
+      cost: "普通出租车约 2,000–3,000 TL / 车；预约专车以确认单为准",
       summary: "让司机把你送到酒店门口；晚高峰和降雨会明显拉长时间。"
     },
     tips: ["把酒店土耳其语地址和电话离线保存。", "超过免费等待时间前主动联系司机。"]
   },
   "d0-2": {
     kind: "stay",
-    mapQuery: "Lokalist Istanbul Taksim",
-    intro: "三晚不换酒店。入住时一次确认早餐时间、退房时间、机场接送和前台夜间联系方式。",
-    checklist: ["索取一张写有酒店地址和电话的名片", "确认早餐地点与 11 月 2 日能否提前用餐", "请前台再次核对返程车辆时间", "房间内把票券、护照和充电设备集中放置"]
+    mapQuery: "Moxy Istanbul Taksim",
+    intro: "三晚不换酒店。地址：Katip Mustafa Çelebi Mah., Büyükparmakkapı Sok. No.11 A/1, Beyoğlu；电话：+90 212 703 6699。入住时一次确认早餐时间、退房时间和前台夜间联系方式。",
+    checklist: ["保存酒店官方地址、电话和地图定位", "确认收费早餐地点与 11 月 2 日能否提前用餐", "向前台确认返程专车能否在门口停靠", "房间内把票券、护照和充电设备集中放置"]
   },
   "d0-3": {
     kind: "checklist",
@@ -1423,7 +1423,7 @@ TRIP_DATA.stopDetails = {
   },
   "d2-0": {
     kind: "transport",
-    origin: "Lokalist Istanbul · Taksim",
+    origin: "Moxy Istanbul Taksim",
     destination: "Gülhane 站 / 托普卡帕宫",
     mapQuery: "Gülhane Tram Station Istanbul",
     intro: "公共交通比早高峰打车更稳定。路线包含一次步行、F1 缆车和 T1 电车，抵达 Gülhane 后从公园一侧进入老城。",
@@ -1574,14 +1574,14 @@ TRIP_DATA.stopDetails = {
   "d2-10": {
     kind: "transport",
     origin: "Olden 1772 / Sirkeci",
-    destination: "Lokalist Istanbul · Taksim",
-    mapQuery: "Lokalist Istanbul Taksim",
+    destination: "Moxy Istanbul Taksim",
+    mapQuery: "Moxy Istanbul Taksim",
     intro: "晚餐后直接返回。若明显疲劳或下雨，可在主路通过平台叫车。",
     route: ["Sirkeci T1", "Kabataş", "F1 Taksim", "酒店"],
     public: {
       time: "约 35–45 分钟",
       cost: "约 92.40 TL / 人",
-      summary: "T1 至 Kabataş，换乘 F1 至 Taksim，再步行回酒店。"
+      summary: "T1 至 Kabataş，换乘 F1 至 Taksim，再从广场沿独立大街方向步行约 5–8 分钟回酒店。"
     },
     ride: {
       time: "约 20–35 分钟",
@@ -1591,7 +1591,7 @@ TRIP_DATA.stopDetails = {
   },
   "d1-0": {
     kind: "transport",
-    origin: "Lokalist Istanbul · Taksim",
+    origin: "Moxy Istanbul Taksim",
     destination: "多尔玛巴赫切宫",
     mapQuery: "Dolmabahce Palace Istanbul",
     intro: "早上直达宫殿可节省步行；若叫车等待过久，立即改走 F1。",
@@ -1802,7 +1802,7 @@ TRIP_DATA.stopDetails = {
   },
   "d3-1": {
     kind: "food",
-    mapQuery: "Lokalist Istanbul Taksim",
+    mapQuery: "Moxy Istanbul Taksim",
     intro: "早餐以稳定、快速和不过量为原则，不离开酒店范围。",
     budget: "若房费不含早餐，约 350–650 TL / 人",
     reservation: "前一晚向前台确认 08:00 是否准时开放。",
@@ -1815,13 +1815,13 @@ TRIP_DATA.stopDetails = {
   },
   "d3-2": {
     kind: "checklist",
-    mapQuery: "Lokalist Istanbul Taksim",
+    mapQuery: "Moxy Istanbul Taksim",
     intro: "退房前完成房间、保险箱、充电插座和行李件数的四次确认。",
     checklist: ["检查保险箱、床下、浴室和全部插座", "结清迷你吧与城市税并保存账单", "确认接送车辆车牌与司机电话", "同行人和行李全部到齐后再交房卡"]
   },
   "d3-3": {
     kind: "transport",
-    origin: "Lokalist Istanbul · Taksim",
+    origin: "Moxy Istanbul Taksim",
     destination: "IST 国际出发层",
     mapQuery: "Istanbul Airport International Departures",
     intro: "周一早高峰必须把拥堵作为常态。预约车是主方案，M2 + M11 是车辆失约时的备选。",

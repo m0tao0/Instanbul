@@ -1,32 +1,17 @@
 const TRIP_DATA = {
   days: [
     {
-      id: 0,
-      label: "Day 0",
-      title: "抵达 · 在 Taksim 落脚",
-      area: "IST 机场 → Moxy Istanbul Taksim",
-      date: "OCT 30 · FRI",
-      summary: "晚间抵达，只处理入境、接送与入住，把体力留给两个完整游览日。",
-      image: "assets/images/bosphorus.jpg",
-      color: "terracotta",
-      items: [
-        { time: "晚间", title: "抵达伊斯坦布尔 IST", meta: "入境、取行李与通信准备 · 预留约 60–90 分钟", type: "transfer" },
-        { time: "落地 +90", title: "提前预约专车接送", meta: "IST → Moxy Istanbul Taksim，通常约 60–90 分钟；酒店不提供机场接驳", type: "transfer" },
-        { time: "入住后", title: "办理入住 · Moxy Istanbul Taksim", meta: "独立大街附近连住三晚，不在短途旅行中搬酒店", type: "stay" },
-        { time: "睡前", title: "确认次日票券、船班与天气", meta: "多尔玛巴赫切宫票券离线保存；再次确认 14:40 游船、风力与降雨", type: "note" }
-      ]
-    },
-    {
       id: 1,
       label: "Day 1",
       title: "现代伊斯坦布尔 · 海峡与设计",
-      area: "Dolmabahçe → Galataport → Bosphorus → Galata",
+      area: "Wyndham Levent → Moxy Taksim → Dolmabahçe → Galata",
       date: "OCT 31 · SAT",
-      summary: "10:00 出发；宫殿与海峡游船后，乘 T1＋F2 前往 Serdar-ı Ekrem 设计小街购物拍照。现代艺术博物馆只作条件备选，两顿正餐和 14:40 游船均不压缩。",
+      summary: "08:45 从 Wyndham Grand Istanbul Levent 出发，先到 Moxy Istanbul Taksim 寄存行李；10:00 开始原定游览，宫殿、午餐、14:40 游船和傍晚设计小街均不压缩。",
       image: "assets/images/karakoy.jpg",
       color: "gold",
       items: [
-        { time: "10:00", title: "酒店出发前往宫殿", meta: "出租车直达多尔玛巴赫切宫 · 约 15 分钟", type: "transfer" },
+        { time: "08:45", title: "Wyndham Levent 出发 · Moxy 寄存行李", meta: "08:45–09:40 · 前往 Moxy Istanbul Taksim，寄存行李并确认入住安排；正式入住时间为 15:00", type: "transfer" },
+        { time: "10:00", title: "Moxy 出发前往宫殿", meta: "出租车直达多尔玛巴赫切宫 · 约 15 分钟", type: "transfer" },
         { time: "10:15", title: "多尔玛巴赫切宫", attraction: "dolmabahce", meta: "主线 10:15–11:45 · 只看主宫精华与海峡宫门，不安排绘画博物馆" },
         { time: "11:45", title: "沿海前往 Tophane", meta: "天气适合时步行 25–35 分钟；下雨则从 Kabataş 乘 T1 至 Tophane", type: "transfer" },
         { time: "", title: "备选 · 伊斯坦布尔现代艺术博物馆", attraction: "istanbul-modern", meta: "仅在 11:20 前离开宫殿且取消 Paket Postanesi 购物时启用 · 约 50 分钟；否则直接跳过", optional: true },
@@ -38,7 +23,7 @@ const TRIP_DATA = {
         { time: "17:10", title: "Serdar-ı Ekrem 设计小街", attraction: "serdar-ekrem", meta: "17:10–18:15 · 逛本土设计、首饰与复古小店，拍 Doğan Apartment 和加拉塔塔街景；不登塔" },
         { time: "18:15", title: "返回 Tünel 前往晚餐", meta: "沿 Serdar-ı Ekrem 上行至 Tünel，再步行至 Eleos；18:35 前抵达", type: "transfer" },
         { time: "18:40", title: "Eleos Beyoğlu 晚餐", meta: "18:40–20:10 · 位于 İstiklal Cd. No.231；预约 Beyoğlu 店并留约 90 分钟", type: "food" },
-        { time: "20:10", title: "独立大街短逛或直接返程", attraction: "istiklal", meta: "不再默认走完整段到 Taksim；体力好时短逛 20–30 分钟，累了从 Şişhane 乘 M2 或打车返回", type: "walk" }
+        { time: "20:10", title: "独立大街短逛 · 返回 Moxy 入住", attraction: "istiklal", meta: "不再默认走完整段；体力好时短逛 20–30 分钟，随后返回 Moxy 正式办理入住；累了可从 Şişhane 乘 M2 或打车", type: "walk" }
       ]
     },
     {
@@ -67,7 +52,7 @@ const TRIP_DATA = {
     {
       id: 3,
       label: "Day 3",
-      title: "返程 · 13:30 飞往上海",
+      title: "返程 · 13:35 飞往上海",
       area: "Moxy Istanbul Taksim → IST",
       date: "NOV 02 · MON",
       summary: "不再新增景点，08:30 准时离店，为周一早高峰、国际航班、安检和步行距离留足缓冲；起飞时间以机票订单和航司通知为准。",
@@ -79,7 +64,7 @@ const TRIP_DATA = {
         { time: "08:10", title: "办理退房", meta: "08:25 前完成人员与行李确认", type: "stay" },
         { time: "08:30", title: "专车前往 IST 机场", meta: "周一早高峰按常态预留；下雨、事故或退税不再压缩缓冲", type: "transfer" },
         { time: "09:45", title: "目标抵达机场", meta: "预留入口安检、值机、退税、出境及前往远端登机口时间", type: "note" },
-        { time: "13:30", title: "起飞返回上海", meta: "以机票订单和航司通知为准；国际航班至少提前 3 小时抵达机场", type: "transfer" }
+        { time: "13:35", title: "起飞返回上海", meta: "以机票订单和航司通知为准；国际航班至少提前 3 小时抵达机场", type: "transfer" }
       ]
     }
   ],
@@ -1371,56 +1356,6 @@ TRIP_DATA.exchangeRates = {
 };
 
 TRIP_DATA.stopDetails = {
-  "d0-0": {
-    kind: "transport",
-    origin: "IST 国际到达层",
-    destination: "Moxy Istanbul Taksim",
-    mapQuery: "Istanbul Airport",
-    intro: "落地后的目标不是赶路，而是稳定完成入境、取行李、联网和进城。把酒店地址与接送司机信息提前截图。",
-    route: ["IST 到达层", "M11 Gayrettepe", "M2 Taksim", "Moxy Istanbul Taksim"],
-    public: {
-      time: "约 70–90 分钟",
-      cost: "至少约 92.40 TL / 人；M11 专项票价需临近复核",
-      summary: "M11 至 Gayrettepe，换乘 M2 至 Taksim，再步行到酒店；不能再按旧价 84 TL 锁定预算。",
-      steps: ["在机场地铁层购买或充值 Istanbulkart", "M11 往 Gayrettepe 方向", "换乘 M2 往 Yenikapı，Taksim 下车", "从 İstiklal Caddesi 一侧出站，步行约 5–8 分钟到 Moxy"]
-    },
-    ride: {
-      time: "约 50–90 分钟",
-      cost: "普通出租车约 2,000–3,000 TL / 车",
-      summary: "黄色出租车或平台叫车直达；拥堵、过路费和平台服务费会使价格上浮。提前预约专车的价格以书面确认单为准。"
-    },
-    tips: ["在官方上车区核对车牌，不接受揽客者的口头一口价。", "Moxy 官方不提供机场接驳；如果航班延误，优先通知预订的专车平台或司机。"]
-  },
-  "d0-1": {
-    kind: "transport",
-    origin: "IST 机场到达层",
-    destination: "Moxy Istanbul Taksim",
-    mapQuery: "Moxy Istanbul Taksim",
-    intro: "提前预约的专车是晚间抵达最省体力的方案。Moxy 官方不提供机场接驳；上车前确认司机姓名、车牌、包含的等待时间及是否另收过路费。",
-    route: ["到达大厅会合点", "机场高速", "Taksim", "酒店前台"],
-    public: {
-      time: "约 70–90 分钟",
-      cost: "至少约 92.40 TL / 人；M11 专项票价需临近复核",
-      summary: "备选方案为 M11 → Gayrettepe → M2 → Taksim。"
-    },
-    ride: {
-      time: "约 50–90 分钟",
-      cost: "普通出租车约 2,000–3,000 TL / 车；预约专车以确认单为准",
-      summary: "让司机把你送到酒店门口；晚高峰和降雨会明显拉长时间。"
-    },
-    tips: ["把酒店土耳其语地址和电话离线保存。", "超过免费等待时间前主动联系司机。"]
-  },
-  "d0-2": {
-    kind: "stay",
-    mapQuery: "Moxy Istanbul Taksim",
-    intro: "三晚不换酒店。地址：Katip Mustafa Çelebi Mah., Büyükparmakkapı Sok. No.11 A/1, Beyoğlu；电话：+90 212 703 6699。入住时一次确认早餐时间、退房时间和前台夜间联系方式。",
-    checklist: ["保存酒店官方地址、电话和地图定位", "确认收费早餐地点与 11 月 2 日能否提前用餐", "向前台确认返程专车能否在门口停靠", "房间内把票券、护照和充电设备集中放置"]
-  },
-  "d0-3": {
-    kind: "checklist",
-    intro: "睡前只做会影响第二天执行的检查，不再临时增加景点。",
-    checklist: ["多尔玛巴赫切宫票券与酒店到宫殿路线离线保存", "确认 14:40 短线游船时刻、临时公告与天气", "Istanbulkart 余额至少覆盖 4–6 次刷卡", "设置 08:45 与 09:00 两个闹钟"]
-  },
   "d2-0": {
     kind: "transport",
     origin: "Moxy Istanbul Taksim",
@@ -1591,6 +1526,26 @@ TRIP_DATA.stopDetails = {
   },
   "d1-0": {
     kind: "transport",
+    origin: "Wyndham Grand Istanbul Levent Hotel & Conference Center",
+    destination: "Moxy Istanbul Taksim",
+    mapQuery: "Moxy Istanbul Taksim",
+    intro: "Day 1 从 Wyndham Grand Istanbul Levent 开始。08:45 离开，先到 Moxy Istanbul Taksim 寄存行李；Moxy 官方入住时间为 15:00，出发前需向酒店确认提前寄存安排。",
+    route: ["Wyndham Grand Istanbul Levent", "Levent M2", "Taksim M2", "Moxy Istanbul Taksim"],
+    public: {
+      time: "约 25–40 分钟",
+      cost: "约 46.20 TL / 人",
+      summary: "Wyndham 靠近 Levent M2 站；乘 M2 往 Yenikapı 方向至 Taksim，再步行约 5–8 分钟到 Moxy。携带大件行李时注意车站电梯与早高峰人流。",
+      steps: ["08:45 从 Wyndham 前台出发", "步行进入 Levent M2 站", "乘往 Yenikapı 方向列车，Taksim 下车", "沿 İstiklal Caddesi 方向步行至 Moxy", "09:40 前完成寄存并整理随身物品"]
+    },
+    ride: {
+      time: "约 20–40 分钟",
+      cost: "约 450–800 TL / 车",
+      summary: "携大件行李时优先平台叫车；目的地填写 Moxy Istanbul Taksim，并在出发前确认后备厢空间。"
+    },
+    tips: ["提前联系 Moxy 确认 10 月 31 日上午可寄存全部行李。", "这里只寄存行李，不等待 15:00 正式入住。", "09:50 前结束寄存，10:00 准时离开 Moxy 前往宫殿。"]
+  },
+  "d1-1": {
+    kind: "transport",
     origin: "Moxy Istanbul Taksim",
     destination: "多尔玛巴赫切宫",
     mapQuery: "Dolmabahce Palace Istanbul",
@@ -1607,7 +1562,7 @@ TRIP_DATA.stopDetails = {
       summary: "短途通常按最低消费起计；目的地填写 Dolmabahçe Sarayı Saat Kulesi。"
     }
   },
-  "d1-2": {
+  "d1-3": {
     kind: "transport",
     origin: "多尔玛巴赫切宫",
     destination: "Tophane / 伊斯坦布尔现代",
@@ -1630,7 +1585,7 @@ TRIP_DATA.stopDetails = {
       summary: "沿 Meclis-i Mebusan Caddesi 向南，路线平缓。"
     }
   },
-  "d1-4": {
+  "d1-5": {
     kind: "food",
     mapQuery: "Gizia Brasserie Galataport",
     intro: "主线先在 Paket Postanesi 看约 15 分钟土耳其本土设计，再安排约 60 分钟海滨午餐；若启用现代艺术博物馆备选，则取消购物并直接前往餐厅。",
@@ -1694,7 +1649,7 @@ TRIP_DATA.stopDetails = {
     ],
     tips: ["13:45 离开，给前往官方码头和候船留出约 20 分钟缓冲。", "主线购物只留 15 分钟；选择现代艺术博物馆时取消购物，不压缩午餐和游船。"]
   },
-  "d1-5": {
+  "d1-6": {
     kind: "transport",
     origin: "Tophane 站",
     destination: "Eminönü Şehir Hatları 码头",
@@ -1712,13 +1667,13 @@ TRIP_DATA.stopDetails = {
       summary: "加拉塔桥经常拥堵，通常不比电车更快。"
     }
   },
-  "d1-6": {
+  "d1-7": {
     kind: "checklist",
     mapQuery: "Eminonu Sehir Hatlari Bosphorus Tours",
     intro: "候船阶段只做三件事：确认官方窗口、确认船名与返航时间、提前选择上层甲板位置。",
     checklist: ["只在 Şehir Hatları 官方窗口或官方渠道购票", "确认是短线 Bosphorus Tour 而非单程渡轮", "保留返航时间和下船码头截图", "14:25 前完成洗手间和饮水准备"]
   },
-  "d1-8": {
+  "d1-9": {
     kind: "transport",
     origin: "Eminönü Şehir Hatları 码头",
     destination: "Tünel / Serdar-ı Ekrem Caddesi",
@@ -1738,7 +1693,7 @@ TRIP_DATA.stopDetails = {
     },
     tips: ["T1 经过桥上时即可从车窗看金角湾，不另设桥中段拍照停留。", "F2 车程很短但能避开最陡的一段坡。", "约 17:10 抵达即可，不为错过一班车焦虑。"]
   },
-  "d1-10": {
+  "d1-11": {
     kind: "transport",
     origin: "Serdar-ı Ekrem Caddesi / 加拉塔塔外侧",
     destination: "Eleos Restaurant Beyoğlu",
@@ -1752,7 +1707,7 @@ TRIP_DATA.stopDetails = {
     },
     tips: ["返程是上坡，最后一家店最迟 18:10 结账。", "如果逛街时已经疲劳，不走到塔脚，在 Doğan Apartment 附近直接折返。", "Eleos 入口不显眼，预留 5 分钟确认 Hıdivyal Palas 楼层指示。"]
   },
-  "d1-11": {
+  "d1-12": {
     kind: "food",
     mapQuery: "Eleos Restaurant Beyoglu",
     intro: "这是两天完整行程的最后一顿正餐。Serdar-ı Ekrem 购物结束后返回 Tünel，再步行到独立大街南段的 Eleos，18:40 预约时间保持不变。",
@@ -1847,7 +1802,7 @@ TRIP_DATA.stopDetails = {
   "d3-5": {
     kind: "checklist",
     mapQuery: "Istanbul Airport",
-    intro: "13:30 起飞。登机前只保留护照、登机牌、手机和随身药品在最容易取用的位置。",
+    intro: "13:35 起飞。登机前只保留护照、登机牌、手机和随身药品在最容易取用的位置。",
     checklist: ["登机口可能临时调整，持续关注屏幕", "把充电宝、耳机和转接头留在随身包", "起飞前把酒店和接送收据归档", "开启目的地时区并关闭数据漫游"]
   }
 };

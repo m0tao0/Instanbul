@@ -303,7 +303,7 @@
 
     <section class="next-stop">
       <p class="eyebrow">继续行程</p>
-      <h2>${nextEntry ? `下一站：${nextEntry.item.title}` : "四日行程已完成"}</h2>
+      <h2>${nextEntry ? `下一站：${nextEntry.item.title}` : "三日行程已完成"}</h2>
       <div class="next-actions">
         <a class="text-link next-back" href="index.html#day-${attractionDay}">← 返回时间线</a>
         ${nextEntry ? `<a class="primary-link" href="${entryUrl(nextEntry)}">进入下一站 <span>→</span></a>` : ""}

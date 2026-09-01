@@ -447,7 +447,7 @@ button { color: inherit; }
   z-index: 4;
   grid-area: strip;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--line-strong);
   border-bottom: 1px solid var(--line);
 }
@@ -2730,9 +2730,7 @@ blockquote::after { content: "”"; right: 20px; bottom: 4px; }
   .trip-ticket { grid-template-columns: 64px 1fr 20px; }
   .trip-ticket strong { font-size: 17px; }
   .trip-ticket span { font-size: 11px; }
-  .hero-day-strip { grid-template-columns: 1fr 1fr; }
-  .hero-day-strip a:nth-child(2) { border-right: 0; }
-  .hero-day-strip a:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .hero-day-strip { grid-template-columns: repeat(3, 1fr); }
   .hero-day-strip a { min-height: 62px; padding: 11px 13px; gap: 12px; }
   .hero-day-strip b { font-size: 17px; }
 
